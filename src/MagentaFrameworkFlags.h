@@ -1,12 +1,14 @@
 /*
  * Copyright (C) 2018 Dmitry Kozichev. All rights reserved.
  *
- * MagentaFramework.h
+ * MagentaFrameworkFlags.h
  * Created on 12 џэт. 2019 у.
  */
 
 #pragma once
 
-#include "Animation/MFAnimation.h"
+// Compilation flags
 
+#define MF_VERBOSE 1
+#define MF_DEBUG 1
 

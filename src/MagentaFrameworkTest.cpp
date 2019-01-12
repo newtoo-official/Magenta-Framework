@@ -5,10 +5,10 @@
  * Created on 12 џэт. 2019 у.
  */
 
+#include "MagentaFramework.h"
 #include <iostream>
-using namespace std;
 
 int main() {
-	cout << "Hello World!" << endl;
+	std::cout << "Hello World!\n";
 	return 0;
 }
