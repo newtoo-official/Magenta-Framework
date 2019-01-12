@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2018 Dmitry Kozichev. All rights reserved.
  *
- * MFAValueKeyframe.h
+ * MFAPropertyKeyframe.h
  * Created on 12 џэт. 2019 у.
  */
 
@@ -9,23 +9,23 @@
 
 #include "MFAKeyframe.h"
 
-typedef double* MFAnimatedValue;
+typedef double* MFAProperty;
 
-class MFAValueKeyframe : public MFAKeyframe
+class MFAPropertyKeyframe : public MFAKeyframe
 {
-	MFAnimatedValue m_target;
+	MFAProperty m_property;
 	double m_value;
 
-	const KeyframeType ValueType = 1;
+	const KeyframeType TypeProperty = 1;
 public:
-	MFAValueKeyframe(MFASeconds, MFAnimatedValue, double);
+	MFAPropertyKeyframe(MFASeconds, MFAProperty, double);
 
 	double getNeighborValue();
 	double getValue() const;
 	void setValue(double);
 
-	MFAnimatedValue getTargetValue() const;
-	void setTargetValue(MFAnimatedValue);
+	MFAProperty getProperty() const;
+	void setProperty(MFAProperty);
 
 	MFAKeyframe *findNeighbor() override;
 	void play() override;
