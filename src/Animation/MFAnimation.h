@@ -52,7 +52,7 @@ public:
 	};
 
 	enum
-	AnimationCircleState {
+	AnimationCycleState {
 		Working,
 		PendingToTerminate,
 		Terminated
@@ -61,7 +61,7 @@ public:
 protected:
 	bool m_playing = false;
 
-	AnimationCircleState m_state = Working;
+	AnimationCycleState m_state = Working;
 
 	MFASeconds m_duration, m_position = 0;
 	AnimationDirection m_direction = Forward;
@@ -85,6 +85,9 @@ public:
 
 	AnimationDirection getDirection() const;
 	void setDirection(AnimationDirection);
+
+	AnimationCycleState getCycleState() const;
+	void setCycleState(AnimationCycleState);
 
 	double getSpeed() const;
 	void setSpeed(double);

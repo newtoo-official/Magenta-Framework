@@ -15,8 +15,15 @@ protected:
 	MFASeconds m_position;
 	MFAnimation *m_animation = 0;
 
+	typedef short KeyframeType;
+
+private:
+	KeyframeType m_type;
+
 public:
-	MFAKeyframe(MFASeconds origin = 0.0f);
+	MFAKeyframe(KeyframeType type = 0, MFASeconds origin = 0.0f);
+
+	KeyframeType getType() const;
 
 	void setFoundation(MFAnimation *foundation);
 	MFASeconds getDuration();

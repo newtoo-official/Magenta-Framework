@@ -7,6 +7,7 @@
 
 #include "MFAnimation.h"
 #include "MFAKeyframe.h"
+#include "MFAnimationCycle.h"
 
 MFAKeyframeSet::MFAKeyframeSet(MFAnimation *animation)
 : m_animation(animation), m_weak(false)
@@ -64,6 +65,8 @@ MFAKeyframeSet::~MFAKeyframeSet()
 
 MFAnimation::MFAnimation(MFASeconds duration) : m_duration(duration), m_keyframes(this)
 {
+	MFAnimationCycle* cycle = new MFAnimationCycle(this);
+	cycle->run();
 }
 
 void MFAnimation::playFrame()
@@ -140,6 +143,16 @@ void MFAnimation::setDirection(AnimationDirection direction)
 	m_direction = direction;
 }
 
+MFAnimation::AnimationCycleState MFAnimation::getCycleState() const
+{
+	return m_state;
+}
+
+void MFAnimation::setCycleState(AnimationCycleState state)
+{
+	m_state = state;
+}
+
 double MFAnimation::getSpeed() const
 {
 	return m_speed;
@@ -194,4 +207,10 @@ void MFAnimation::stop()
 
 MFAnimation::~MFAnimation()
 {
+	m_state = AnimationCycleState::PendingToTerminate;
+	/*
+	while(m_state != AnimationCircleState::Terminated)
+	{
+	}
+	*/
 }
