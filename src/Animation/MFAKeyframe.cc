@@ -2,7 +2,7 @@
  * Copyright (C) 2018 Dmitry Kozichev. All rights reserved.
  *
  * MFAFrame.cc
- * Created on 12 ÿíâ. 2019 ã.
+ * Created on 12 ï¿½ï¿½ï¿½. 2019 ï¿½.
  */
 
 #include "MFAKeyframe.h"
@@ -49,7 +49,7 @@ std::size_t MFAKeyframe::getIndex()
 {
 	assert(m_animation == 0);
 
-	for(size_t index = 0; index < getAnimation()->keyframes().size(); ++index) {
+	for(std::size_t index = 0; index < getAnimation()->keyframes().size(); ++index) {
 		if(getAnimation()->keyframes()[index] == this)
 			return index;
 	}

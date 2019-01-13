@@ -2,12 +2,12 @@
  * Copyright (C) 2018 Dmitry Kozichev. All rights reserved.
  *
  * Animation.h
- * Created on 12 ÿíâ. 2019 ã.
+ * Created on 12 ï¿½ï¿½ï¿½. 2019 ï¿½.
  */
 
 #pragma once
 
-#include "MFAKeyFrame.h"
+#include "MFAKeyframe.h"
 #include "MFAnimation.h"
 #include "MFAnimationCycle.h"
 #include "MFAPropertyKeyframe.h"
