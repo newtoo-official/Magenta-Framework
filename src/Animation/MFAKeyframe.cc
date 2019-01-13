@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2018 Dmitry Kozichev. All rights reserved.
+ * Copyright (C) 2019 Dmitry Kozichev. All rights reserved.
  *
  * MFAFrame.cc
- * Created on 12 ���. 2019 �.
+ * Created on 12.01.2019
  */
 
 #include "MFAKeyframe.h"
