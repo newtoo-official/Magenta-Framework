@@ -9,8 +9,13 @@
 #include "MFAPropertyKeyframe.h"
 
 MFAPropertyKeyframe::MFAPropertyKeyframe(MFASeconds origin, MFAProperty target, double value)
-: MFAKeyframe(TypeProperty, origin), m_property(target), m_value(value)
+: MFAKeyframe(origin), m_property(target), m_value(value)
 {
+}
+
+MFAKeyframe::KeyframeType MFAPropertyKeyframe::getType()
+{
+	return TypeProperty;
 }
 
 double MFAPropertyKeyframe::getNeighborValue()

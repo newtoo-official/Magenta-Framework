@@ -17,8 +17,11 @@ class MFAPropertyKeyframe : public MFAKeyframe
 	double m_value;
 
 	const KeyframeType TypeProperty = 1;
+
 public:
 	MFAPropertyKeyframe(MFASeconds, MFAProperty, double);
+
+	KeyframeType getType() override;
 
 	double getNeighborValue();
 	double getValue() const;

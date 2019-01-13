@@ -17,13 +17,10 @@ protected:
 
 	typedef short KeyframeType;
 
-private:
-	KeyframeType m_type;
-
 public:
-	MFAKeyframe(KeyframeType type = 0, MFASeconds origin = 0.0f);
+	MFAKeyframe(MFASeconds origin = 0.0f);
 
-	KeyframeType getType() const;
+	virtual KeyframeType getType();
 
 	void setFoundation(MFAnimation *foundation);
 	MFASeconds getDuration();

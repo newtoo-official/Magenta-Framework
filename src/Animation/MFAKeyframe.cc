@@ -8,14 +8,13 @@
 #include "MFAKeyframe.h"
 #include <assert.h>
 
-MFAKeyframe::MFAKeyframe(KeyframeType type, MFASeconds origin) : m_position(origin),
-m_type(type)
+MFAKeyframe::MFAKeyframe(MFASeconds origin) : m_position(origin)
 {
 }
 
-MFAKeyframe::KeyframeType MFAKeyframe::getType() const
+MFAKeyframe::KeyframeType MFAKeyframe::getType()
 {
-	return m_type;
+	return 0;
 }
 
 void MFAKeyframe::setFoundation(MFAnimation *foundation)
