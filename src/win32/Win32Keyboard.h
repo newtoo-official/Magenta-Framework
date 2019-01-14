@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2018 Dmitry Kozichev. All rights reserved.
+ * Copyright (C) 2019 Dmitry Kozichev. All rights reserved.
  *
  * Win32Keyboard.h
- * Created on 13 џэт. 2019 у.
+ * Created on 13.01.2019
  */
 
 #pragma once

@@ -32,4 +32,5 @@
 *.app
 
 # Eclipse temporary files
-.settings/
+.settings/*
+Debug/*
