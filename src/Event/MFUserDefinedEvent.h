@@ -15,13 +15,15 @@ struct MFEDetail
 	enum
 	DetailType {
 		TypeInteger,
-		TypeString
+		TypeString,
+		TypePointer
 	};
 	DetailType type;
 
 	// union
 	double Integer;
 	std::string String;
+	void *Pointer;
 };
 
 #include <map>

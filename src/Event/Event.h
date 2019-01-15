@@ -8,9 +8,9 @@
 #pragma once
 
 #include "MFEvent.h"
-#include "MFEventProvider.h"
+#include "MFECapturingCondition.h"
 #include "MFEventTarget.h"
-#include "MFEventTracer.h"
+#include "MFEventDispatcher.h"
 #include "MFMouseEvent.h"
 #include "MFUserDefinedEvent.h"
 

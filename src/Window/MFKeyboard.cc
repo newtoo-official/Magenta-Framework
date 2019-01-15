@@ -8,7 +8,7 @@
 #include "MFKeyboard.h"
 
 #ifdef _WIN32
-#include "Win32Keyboard.h"
+#include "../win32/Win32Keyboard.h"
 #endif
 
 MFKeyboard::MFKeyboard(MFFocusedWidget* focusedWidget) : m_focused_widget(focusedWidget)

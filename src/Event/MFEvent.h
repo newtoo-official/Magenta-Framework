@@ -50,8 +50,8 @@ protected:
 	typedef short EventType;
 
 public:
-	MFEvent(bool bubbles = false, bool cancelable = false, MFEventTarget* currentTarget = 0,
-			MFEventTarget* target = 0, Phase phase = AtTarget);
+	MFEvent(bool bubbles = false, bool cancelable = false, MFEventTarget *currentTarget = 0,
+			MFEventTarget *target = 0, Phase phase = AtTarget);
 
 	virtual EventType getType();
 
@@ -59,11 +59,12 @@ public:
 
 	MFTimeStamp getTimeStamp() const;
 
-	MFEventTarget* getCurrentTarget() const;
-	MFEventTarget* getTarget() const;
+	MFEventTarget *getCurrentTarget() const;
+	MFEventTarget *getTarget() const;
 
 
 	Phase getPhase() const;
+	void setPhase(Phase);
 
 	bool canBubble() const;
 	bool isCancelable() const;
@@ -76,3 +77,4 @@ public:
 	virtual ~MFEvent();
 };
 
+typedef MFEvent MFUIEvent;

@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2019 Dmitry Kozichev. All rights reserved.
  *
- * MFAFrame.h
+ * MFAKeyframe.h
  * Created on 12.01.2019
  */
 

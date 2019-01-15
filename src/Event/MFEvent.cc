@@ -11,10 +11,10 @@ MFEResult::MFEResult() : canceled(false), propagation(Allowed)
 {
 }
 
-MFEvent::MFEvent(bool bubbles, bool cancelable, MFEventTarget* currentTarget, // @suppress("Member declaration not found")
-		MFEventTarget* target, Phase phase)
-: m_timestamp(MFTime::getTimeStampSinceUnixEpoch()), m_current_target(currentTarget), // @suppress("Symbol is not resolved")
-  m_target(target), m_can_bubble(bubbles), m_cancelable(cancelable), m_phase(phase) // @suppress("Symbol is not resolved")
+MFEvent::MFEvent(bool bubbles, bool cancelable, MFEventTarget *currentTarget,
+		MFEventTarget *target, Phase phase)
+: m_timestamp(MFTime::getTimeStampSinceUnixEpoch()), m_current_target(currentTarget),
+  m_target(target), m_can_bubble(bubbles), m_cancelable(cancelable), m_phase(phase)
 {
 }
 
@@ -47,6 +47,11 @@ MFEventTarget* MFEvent::getTarget() const
 MFEvent::Phase MFEvent::getPhase() const
 {
 	return m_phase;
+}
+
+void MFEvent::setPhase(Phase phase)
+{
+	m_phase = phase;
 }
 
 bool MFEvent::canBubble() const
