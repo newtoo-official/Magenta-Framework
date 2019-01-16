@@ -11,7 +11,7 @@ MFECapturingCondition::MFECapturingCondition()
 {
 }
 
-MFECapturingCondition::ConditionKind getKind()
+MFECapturingCondition::ConditionKind MFECapturingCondition::getKind()
 {
 	return 0;
 }

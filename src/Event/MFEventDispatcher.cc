@@ -54,10 +54,10 @@ void MFEventDispatcher::fire()
 		m_callback(sequence[i], m_event, true);
 	}
 	m_event->setPhase(MFEvent::AtTarget);
-	m_callback(sequence.size() - 1, m_event, true);
+	m_callback(sequence[sequence.size() - 1], m_event, true);
 
 	//Bubbling
-	m_callback(sequence.size() - 1, m_event, false);
+	m_callback(sequence[sequence.size() - 1], m_event, false);
 	m_event->setPhase(MFEvent::Bubbling);
 	for(std::size_t i = sequence.size() - 1; i > 0; --i) {
 		m_callback(sequence[i], m_event, false);
